@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cognito Training and Review Center - About Us</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="about.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo-container text-center py-3">
+      <a href="javascript:history.back()">
+          <img src="pics/c1.png" alt="Logo" class="logo" style="width: 250px;">
+      </a>
+    </div>
+
+    <h1>ABOUT US</h1>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- About Description -->
+  <section class="about-description container py-5">
+    <h2 class="mb-4">VISION</h2>
+    <p>
+      A company guided by ethical and moral standards, honing individuals and groups to be globally competitive in their profession and field of endeavor.
+    </p>
+    <h2 class="mb-4">MISSION</h2>
+    <p>TRAINING: To provide high-quality, industry- and institution-relevant trainings that empower individuals with skills, practices, and confidence needed to achieve their career goals and contribute to their community.</p>
+    <p>REVIEW: To deliver specialized, evidence-based, learner-centered, and updated review programs in various courses that ensure professional readiness and high performance.</p>
+  </section>
+
+  <section class="core-values container py-5">
+    <h2 class="mb-4">CORE VALUES</h2>
+    <ul>
+      <li>Integrity</li>
+      <li>Excellence</li>
+      <li>Quality</li>
+      <li>Innovation</li>
+      <li>Accountability</li>
+      <li>Respect</li>
+      <li>Continuous Learning</li>
+      <li>Customer Care</li>
+    </ul>
+  </section>
+
+  <!-- Team Carousel -->
+  <section class="content container py-5">
+    <h4 class="mb-4">EXECUTIVES</h4>
+    <div class="team-carousel position-relative">
+      <div class="carousel overflow-hidden">
+        <div class="carousel-track d-flex">
+          <div class="carousel-slide me-3">
+            <img src="pics/f3.png" alt="Member 1" />
+            <div class="info">
+              <h3>CRISTOBAL DEXTER V. MENDOLA III, RN</h3>
+              <p>PRORIETOR</p>
+            </div>
+          </div>
+          <div class="carousel-slide me-3">
+            <img src="pics/f7.png" alt="Member 2" />
+            <div class="info">
+              <h3>Doc. JERRY L. CHIONG , MD </h3>
+              <p>SIR</p>
+            </div>
+          </div>
+              <div class="carousel-slide me-3">
+            <img src="pics/f9.jpg" alt="Member 7" />
+            <div class="info">
+              <h3>Atty. Camille Calomadre</h3>
+              <p>Legal Consultant</p>
+            </div>
+          </div>
+          <div class="carousel-slide me-3">
+            <img src="pics/f1.png" alt="Member 4" />
+            <div class="info">
+              <h3>John Florent Valdez</h3>
+              <p>SIR</p>
+            </div>
+          </div>
+          <div class="carousel-slide me-3">
+            <img src="pics/f.png" alt="Member 5" />
+            <div class="info">
+              <h3>Kevin Wasawas</h3>
+              <p>SIR</p>
+            </div>
+          </div>
+          <div class="carousel-slide me-3">
+            <img src="pics/f4.png" alt="Member 6" />
+            <div class="info">
+              <h3>Peary Cabalquinto</h3>
+              <p>SIR</p>
+            </div>
+          </div>
+          <div class="carousel-slide me-3">
+            <img src="pics/f21.png" alt="Member 3" />
+            <div class="info">
+              <h3>Fel Chistian</h3>
+              <p>SIR</p>
+            </div>
+          </div>
+          <div class="carousel-slide me-3">
+            <img src="pics/f8.png" alt="Member 8" />
+            <div class="info">
+              <h3>Arnold Tabon</h3>
+              <p>SIR</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel Navigation Buttons -->
+      <button
+        class="prev-btn btn btn-dark position-absolute top-50 start-0 translate-middle-y"
+        aria-label="Previous"
+        onclick="moveToPrevious()"
+      >
+        &#10094;
+      </button>
+      <button
+        class="next-btn btn btn-dark position-absolute top-50 end-0 translate-middle-y"
+        aria-label="Next"
+        onclick="moveToNext()"
+      >
+        &#10095;
+      </button>
+    </div>
+
+    <!-- Hover Grid -->
+    <h4 class="mt-5 mb-4">STAFF</h4>
+    <div class="team-grid d-flex justify-content-center gap-4 flex-wrap">
+      <div class="team-member position-relative overflow-hidden rounded shadow" style="width: 350px; height: 350px;">
+        <img src="pics/12.jpg" alt="Member 1" class="w-100 h-100 object-fit-cover" />
+        <div class="member-info position-absolute bottom-0 w-100 bg-dark bg-opacity-75 text-white p-3 text-center translate-y-100 hover-translate-y-0 transition-transform">
+          <h3>Member Name 1</h3>
+          <p>Role</p>
+        </div>
+      </div>
+      <div class="team-member position-relative overflow-hidden rounded shadow" style="width: 350px; height: 350px;">
+        <img src="pics/sam.jpg" alt="Samantha Louise S. Jao" class="w-100 h-100 object-fit-cover" />
+        <div class="member-info position-absolute bottom-0 w-100 bg-dark bg-opacity-75 text-white p-3 text-center translate-y-100 hover-translate-y-0 transition-transform">
+          <h3>SAMANTHA LOUISE S. JAO</h3>
+          <p>ADMIN 1</p>
+        </div>
+      </div>
+      <div class="team-member position-relative overflow-hidden rounded shadow" style="width: 350px; height: 350px;">
+        <img src="pics/13.jpg" alt="Member 3" class="w-100 h-100 object-fit-cover" />
+        <div class="member-info position-absolute bottom-0 w-100 bg-dark bg-opacity-75 text-white p-3 text-center translate-y-100 hover-translate-y-0 transition-transform">
+          <h3>Member Name 3</h3>
+          <p>Role</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Carousel Script -->
+  <script>
+    // Dark Mode Toggle Function
+    function toggleDarkMode() {
+      const body = document.body;
+      body.classList.toggle('dark-mode'); // Toggle dark mode on the body element
+
+      // Store the user's theme preference in localStorage
+      if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark'); // Store 'dark' in localStorage
+      } else {
+        localStorage.setItem('theme', 'light'); // Store 'light' in localStorage
+      }
+    }
+
+    // Function to move to the next slide in the carousel
+    let currentSlide = 0;
+    function moveToNext() {
+      const carouselTrack = document.querySelector('.carousel-track');
+      const slides = document.querySelectorAll('.carousel-slide');
+      const totalSlides = slides.length;
+      currentSlide = (currentSlide + 1) % totalSlides;
+
+      const slideWidth = slides[0].offsetWidth + 12; // Adjust for margin/padding if needed
+      carouselTrack.style.transform = `translateX(${-currentSlide * slideWidth}px)`;
+    }
+
+    // Function to move to the previous slide in the carousel
+    function moveToPrevious() {
+      const carouselTrack = document.querySelector('.carousel-track');
+      const slides = document.querySelectorAll('.carousel-slide');
+      const totalSlides = slides.length;
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+
+      const slideWidth = slides[0].offsetWidth + 12; // Adjust for margin/padding if needed
+      carouselTrack.style.transform = `translateX(${-currentSlide * slideWidth}px)`;
+    }
+
+    // Initialize the page when it loads
+    window.addEventListener('load', () => {
+      // Check for stored theme preference in localStorage
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode'); // Apply dark mode if previously set
+      }
+
+      // Initialize the carousel to the first slide
+      const carouselTrack = document.querySelector('.carousel-track');
+      carouselTrack.style.transform = 'translateX(0)';
+    });
+  </script>
+
+</body>
+</html>

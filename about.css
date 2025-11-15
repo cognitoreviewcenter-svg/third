@@ -1,0 +1,384 @@
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif !important;
+  background-color: #ece8e8;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  cursor: url('pics/hand2.png') 32 32, auto;
+}
+
+/* Header Section */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 50px;
+  background-color: #f1f1f1;
+  box-sizing: border-box;
+  width: 100%;
+}
+.core-values ul {
+    font-family: 'Bodoni Moda', serif;  /* Apply Bodoni-like font */
+    font-weight: bold;  /* Make the font bold */
+    margin: 0;
+    font-size: 3em; /* Adjust size to fit your design */
+    padding-left: 0; /* Remove default padding */
+    list-style-type: none; /* Remove the bullets */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the list items */
+    justify-content: center;
+}
+
+.core-values ul li {
+    margin: 10px 0; /* Add some space between items */
+    text-align: center; /* Center the text within each list item */
+}
+
+
+header h1 {
+    font-family: 'Bodoni Moda', serif;  /* Apply Bodoni-like font */
+    font-weight: bold;  /* Make the font bold */
+    margin: 0;
+    font-size: 5em; /* Adjust size to fit your design */
+    color: rgb(15, 15, 15);  
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+header.dark-mode {
+    background-color: #ffffff;
+}
+
+.about-us.dark-mode {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+.team.dark-mode {
+    background-color: #1e1e1e;
+}
+
+.team-member.dark-mode {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+h3 {
+    font-family: 'Bodoni Moda', serif;  /* Apply Bodoni-like font */
+    font-weight: bold;  /* Make the font bold */
+    margin: 0;
+    font-size: 2em; /* Adjust size to fit your design */
+    color: #f39c12;  
+}
+
+h4 {
+    font-family: 'Bodoni Moda', serif;  /* Apply Bodoni-like font */
+    font-weight: bold;  /* Make the font bold */
+    margin: 0;
+    font-size: 5em; /* Adjust size to fit your design */
+    color: #f39c12;  
+}
+
+header .logo-container {
+  display: flex;
+  align-items: center;
+}
+
+header .logo {
+  width: 220px;
+  height: auto;
+  margin-right: 30px;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #f39c12;
+  font-size: 4em;
+}
+
+.about-description p {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+
+.content h2 {
+  margin-bottom: 1rem;
+}
+
+.team-carousel {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.carousel {
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 70px;
+}
+
+.carousel-slide {
+  box-shadow: 0 0 15px rgb(0 0 0 / 0.1);
+  padding: 1rem;
+  text-align: center;
+  cursor: url('pics/hand2.png') 32 32, auto;
+  user-select: none;  
+}
+
+.carousel-slide img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  height: 450px;
+  width: 450px;
+}
+
+.carousel-slide .info h3 {
+  font-size: 2rem;
+  color: #f39c12;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.carousel-slide .info p {
+  color: #f39c12;
+  font-size: 3rem;
+}
+
+.team-grid {
+  gap: 2rem;
+}
+
+.team-member {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
+  transition: transform 0.3s ease;
+  cursor: url('pics/hand2.png') 32 32, auto;
+  width: 350px;
+  height: 350px;
+}
+
+.team-member img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover img {
+  transform: scale(1.05);
+}
+
+.member-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  text-align: center;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover .member-info {
+  transform: translateY(0);
+}
+
+.cta {
+  background-color: #d8d6d6;
+  color: #202020;
+  padding: 3rem 1rem;
+  border-radius: 12px;
+}
+
+.cta p {
+  margin-bottom: 1.5rem;
+  color: #000000;
+  font-size: 1.5rem;
+}
+
+.cta a.btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.2rem;
+}
+
+/* Carousel Navigation Buttons */
+.prev-btn,
+.next-btn {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.6); /* semi-transparent dark */
+  color: #fff;
+  border: none;
+  border-radius: 50%; /* circular shape */
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  background-color: rgba(0, 0, 0, 0.85); /* darker on hover */
+}
+
+.prev-btn:focus,
+.next-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    body {
+        padding: 0 10px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .hero h2 {
+        font-size: 1.8em;
+    }
+
+    .team h2 {
+        font-size: 2em;
+    }
+
+    .image {
+        width: 100%;
+        max-height: 250px;
+    }
+
+    .team-photo {
+        max-height: 300px;
+    }
+
+    footer {
+        font-size: 0.9em;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+}
+
+/* Media Queries for Mobile Responsiveness */
+
+/* Mobile devices (up to 768px) */
+@media (max-width: 768px) {
+    header .logo-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .review-courses-title {
+        font-size: 2.5rem;
+    }
+
+    .notification-box {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+
+    .date-time-display {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    .team h2 {
+        font-size: 1.8rem;
+    }
+
+    .team video {
+        width: 100%;
+        height: auto;
+    }
+
+    .team button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
+
+/* Small mobile devices (up to 480px) */
+@media (max-width: 480px) {
+    .card {
+        margin-bottom: 15px; /* Less space between cards */
+    }
+
+    .notification-box {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .card-img-top {
+        height: 150px;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+    .review-courses-title {
+        font-size: 2rem;
+    }
+
+    .team h2 {
+        font-size: 1.6rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+
+    .date-time-display {
+        font-size: 0.9rem;
+    }
+}

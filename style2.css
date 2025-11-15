@@ -1,0 +1,457 @@
+/* Global font for entire page except header */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ece8e8;
+    cursor: url('pics/hand2.png') 32 32, auto;
+}
+
+/* Keep header font intact */
+header h1 {
+    font-family: 'Bodoni Moda', serif !important;
+    font-weight: bold;
+    margin: 0;
+    font-size: 4em;
+    color: rgb(7, 7, 7);
+}
+
+/* Flip Card Styles */
+.flip-card {
+    perspective: 1000px;
+    height: 200px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 1.1rem;
+}
+
+/* Font styling for flip card front */
+.flip-card-front {
+    font-weight: bold;
+}
+
+/* Font styling for flip card back */
+.flip-card-back {
+    transform: rotateY(180deg);
+    background-color: #f8f9fa;
+}
+
+/* Color customization */
+.flip-card-front.custom-color h4 {
+    color: var(--flip-card-front-text-color, white); /* Default white, can be changed */
+}
+
+.flip-card-back p {
+    color: var(--flip-card-back-text-color, #555); /* Default dark gray for back text */
+}
+
+/* Optional: Change text color for dark/light mode */
+body.dark-mode .flip-card-front.custom-color h4 {
+    color: var(--flip-card-front-text-color-dark, #f39c12); /* Light yellow in dark mode */
+}
+
+body.dark-mode .flip-card-back p {
+    color: var(--flip-card-back-text-color-dark, #f39c12); /* Light gray for dark mode */
+}
+
+ul {
+    padding-left: 0; /* Removes left padding of the <ul> */
+    margin: 0; /* Removes margin from the <ul> */
+}
+
+ul li {
+    margin: 0; /* Removes any space after the bullet */
+    padding: 0; /* Removes padding inside each <li> */
+    
+}
+
+/* Optional: For dark mode, change the background of the date/time */
+body.dark-mode .date-time-display {
+    background-color: rgba(255, 255, 255, 0.7);  /* Light background for dark mode */
+}
+
+/* Optional: For dark mode, change notification background */
+body.dark-mode .notification {
+    background-color: #17a2b8;  /* Blue background for dark mode */
+}
+
+/* Header styles */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;  /* Set padding to 60px */
+    color: rgb(7, 7, 7);
+    background-size: cover;  /* Ensure the background image covers the entire area */
+    background-position: center;  /* Center the background image */
+    height: 25vh;  /* Set height to 100% of the viewport height */
+    background-repeat: no-repeat;
+    box-sizing: border-box;  /* This ensures the padding is included in the height/width calculations */
+}
+
+header .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+header .logo {
+    width: 200px; /* Logo size */
+    height: auto;
+    margin-right: 100px;
+}
+
+/* Navigation styles */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: rgb(10, 10, 10);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em; /* Adjust font size for readability */
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f1c40f; /* Add a hover effect to improve UI */
+}
+
+/* Hero Section with Image Background */
+/* Remove background image in team section */
+.team {
+    padding: 80px 20px;
+    color: rgb(7, 7, 7);
+    text-align: center;
+    max-width: 1200px; /* Limiting the width */
+    margin: 0 auto;
+}
+
+/* Image styling */
+.team-image {
+    width: 90%; /* Make the image take up full width */
+    max-height: 700px; /* Control the height */
+    border-radius: 8px;
+    margin-top: 2px;
+    object-fit: cover; /* Keeps the aspect ratio intact */
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    font-weight: normal;
+    z-index: 1;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    color: #0a0a0a;
+}
+
+/* Optional: Overlay for contrast (to enhance text visibility) */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Added overlay for contrast */
+    z-index: 0; /* Overlay behind the text */
+}
+
+.card-title {
+    color: #f39c12; /* Example color for the title */
+}
+
+.card-text {
+    color: #f39c12 !important; /* Apply color with !important */
+}
+
+/* Team Section */
+.team {
+    padding: 40px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.team h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+.team-image {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.team-photo {
+    width: 100%;
+    border-radius: 8px;
+    max-height: 500px; /* Control image size */
+}
+
+.member-name {
+    position: absolute;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Image styles */
+.image {
+    width: 80%;
+    height: auto;
+    max-height: 400px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Card styles */
+.card {
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #2b2727;
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background-color: #f3efef;
+}
+
+body.dark-mode footer {
+    background-color: #222;
+}
+
+body.dark-mode nav ul li a {
+    color: #e0e0e0;
+}
+
+body.dark-mode nav ul li a:hover {
+    color: #f1c40f;
+}
+
+body.dark-mode .card {
+    background-color: #333;
+    border: 1px solid #444;
+    color: #e0e0e0;
+}
+
+body.dark-mode .card-title {
+    color: #f1c40f;
+}
+
+/* Make footer responsive for mobile */
+footer p {
+    font-size: 1em;
+    margin-bottom: 0;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    body {
+        padding: 0 10px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .hero h2 {
+        font-size: 1.8em;
+    }
+
+    .team h2 {
+        font-size: 2em;
+    }
+
+    .image {
+        width: 100%;
+        max-height: 250px;
+    }
+
+    .team-photo {
+        max-height: 300px;
+    }
+
+    footer {
+        font-size: 0.9em;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+}
+
+/* Media Queries for Mobile Responsiveness */
+
+/* Mobile devices (up to 768px) */
+@media (max-width: 768px) {
+    header .logo-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .review-courses-title {
+        font-size: 2.5rem;
+    }
+
+    .notification-box {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+
+    .date-time-display {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    .team h2 {
+        font-size: 1.8rem;
+    }
+
+    .team video {
+        width: 100%;
+        height: auto;
+    }
+
+    .team button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
+
+/* Small mobile devices (up to 480px) */
+@media (max-width: 480px) {
+    .card {
+        margin-bottom: 15px; /* Less space between cards */
+    }
+
+    .notification-box {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .card-img-top {
+        height: 150px;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+    .review-courses-title {
+        font-size: 2rem;
+    }
+
+    .team h2 {
+        font-size: 1.6rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+
+    .date-time-display {
+        font-size: 0.9rem;
+    }
+}
+

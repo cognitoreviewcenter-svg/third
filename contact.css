@@ -1,0 +1,343 @@
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif !important;
+  background-color: #ece8e8;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  cursor: url('pics/hand2.png') 32 32, auto;
+}
+
+/* Header Section */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 50px;
+  background-color: #f1f1f1;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+header .logo-container {
+  display: flex;
+  align-items: center;
+}
+
+header .logo {
+  width: 220px;
+  height: auto;
+  margin-right: 20px;
+}
+
+header h1 {
+  font-family: 'Bodoni Moda', serif;  /* Apply Bodoni-like font */
+  font-weight: bold;  /* Make the font bold */
+  margin: 0;
+  font-size: 5em;
+  color: #000;
+  letter-spacing: 5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+header.dark-mode {
+    background-color: #ffffff;
+}
+
+.contact-info.dark-mode {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+.contact-form.dark-mode {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+.navbar-dark.bg-dark.dark-mode {
+    background-color: #444;
+}
+
+h2 {
+  font-family: 'Bodoni Moda', serif;  /* Apply Bodoni-like font */
+  font-weight: bold;  /* Make the font bold */
+  margin: 0;
+  font-size: 3.5em;
+  color: #f39c12;
+  letter-spacing: 6px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Slide-in Down Animation */
+@keyframes slideInDown {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(0); }
+}
+
+/* Floating Action Button (FAB) */
+.live-chat-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #6c5ce7;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.live-chat-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Info Section */
+.contact-info {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+    margin: 40px 20px;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(50px);
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 1s;
+}
+
+/* Fade-in Up Animation */
+@keyframes fadeInUp {
+    0% { transform: translateY(50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Contact Form Section */
+.contact-form {
+    text-align: center;
+    margin: 40px 20px;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(50px);
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 1.5s;
+}
+
+/* Interactive Form Field Animation */
+.contact-form input,
+.contact-form textarea {
+    transition: all 0.3s ease;
+}
+
+.contact-form input:hover,
+.contact-form textarea:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.03);
+}
+
+/* Button Hover Animation */
+.contact-form button {
+    background-color: #6c5ce7;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #4e34b3;
+    transform: scale(1.1);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: rgb(160, 156, 156);
+    padding: 20px;
+    margin: 10% auto;
+    width: 50%;
+    text-align: center;
+    border-radius: 10px;
+    animation: slideInUp 0.5s ease-out forwards;
+}
+
+@keyframes slideInUp {
+    0% { transform: translateY(100%); }
+    100% { transform: translateY(0); }
+}
+
+/* Modal Close Button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    body {
+        padding: 0 10px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .hero h2 {
+        font-size: 1.8em;
+    }
+
+    .team h2 {
+        font-size: 2em;
+    }
+
+    .image {
+        width: 100%;
+        max-height: 250px;
+    }
+
+    .team-photo {
+        max-height: 300px;
+    }
+
+    footer {
+        font-size: 0.9em;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+}
+
+/* Media Queries for Mobile Responsiveness */
+
+/* Mobile devices (up to 768px) */
+@media (max-width: 768px) {
+    header .logo-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .review-courses-title {
+        font-size: 2.5rem;
+    }
+
+    .notification-box {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+
+    .date-time-display {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    .team h2 {
+        font-size: 1.8rem;
+    }
+
+    .team video {
+        width: 100%;
+        height: auto;
+    }
+
+    .team button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
+
+/* Small mobile devices (up to 480px) */
+@media (max-width: 480px) {
+    .card {
+        margin-bottom: 15px; /* Less space between cards */
+    }
+
+    .notification-box {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .card-img-top {
+        height: 150px;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+    .review-courses-title {
+        font-size: 2rem;
+    }
+
+    .team h2 {
+        font-size: 1.6rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+
+    .date-time-display {
+        font-size: 0.9rem;
+    }
+}

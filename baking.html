@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cognito Training and Review Center</title>
+    <!-- Bootstrap CSS (via CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css"> <!-- Custom CSS for additional styling -->
+</head>
+<body>
+    <header>
+      
+
+        
+        </div>
+        <div class="logo-container text-center py-3">
+    <a href="javascript:history.back()">
+        <img src="pics/c1.png" alt="Logo" class="logo" style="width: 250px;">
+    </a>
+</div>
+
+            <h1>BAKING FOR KIDS AND ADOLESCENCE</h1>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Dark/Light Mode Toggle Button -->
+        
+    </header>
+    
+   <main class="container my-5">
+
+    <!-- Welcome Text -->
+    <section class="text-center mb-5">
+        <img src="pics/435.jpg" alt="Criminology Review" class="img-fluid rounded shadow mb-4" style="max-height: 600px;">
+        <h2 class="fw-bold">Welcome to Baking for Kids and Adolescence</h2>
+        <p class="lead">
+           "Our baking workshops offer a fun, hands-on experience where kids and adolescents can explore their creativity while learning essential kitchen skills. With each recipe, they build confidence, teamwork, and a sense of accomplishment, all while enjoying delicious treats together."
+        </p>
+    </section>
+
+    
+    <!-- Schedule -->
+    <section class="text-center mb-5">
+        <h3>📅 Course Schedule</h3>
+        <p class="lead">The Baking begins in <strong>December 4, 2025</strong></p>
+    </section>
+
+    <!-- Enrollment -->
+    <section class="text-center mb-5">
+        <h3>📝 Enrollment Details</h3>
+        <p>Enrollment is now open! Reserve your slot and enjoy!</p>
+        <div class="alert alert-info">
+            <strong>Special Offer:</strong> Enroll before <strong>The Designated Date.</strong> 
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="text-center mb-5">
+    <h3>🔗 Enrollment Form</h3>
+    <p><a href="https://forms.gle/KXpgqt4VZF7sG5TZA" target="_blank" rel="noopener noreferrer">Click here to enroll via our Google Form</a>  We're happy to help you!</p>
+</section>
+
+    <!-- Why Choose Cognito -->
+    <section class="text-center">
+        <h3>💼 Why Choose Cognito?</h3>
+        <ul class="list-unstyled">
+            <li>✅ Tailored coaching and complete review materials</li>
+            <li>✅ Convenient location & flexible review schedules</li>
+        </ul>
+        
+    </section>
+
+</main>
+>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const modeToggle = document.getElementById('mode-toggle');
+const body = document.body;
+const header = document.querySelector('header');
+const footer = document.querySelector('footer');
+const navLinks = document.querySelectorAll('nav ul li a');
+const cards = document.querySelectorAll('.card');
+
+// Check if user has a saved theme preference in localStorage
+if (localStorage.getItem('theme') === 'dark') {
+    enableDarkMode();
+} else {
+    // Default is light mode
+    disableDarkMode();
+}
+
+modeToggle.addEventListener('click', () => {
+    if (body.classList.contains('dark-mode')) {
+        disableDarkMode();
+    } else {
+        enableDarkMode();
+    }
+});
+
+// Enable Dark Mode
+function enableDarkMode() {
+    body.classList.add('dark-mode');
+    header.classList.add('dark-mode');
+    footer.classList.add('dark-mode');
+    modeToggle.innerHTML = '🌞';  // Change icon to sun for dark mode
+    navLinks.forEach(link => link.classList.add('dark-mode'));
+    cards.forEach(card => card.classList.add('dark-mode'));
+
+    // Save the preference to localStorage
+    localStorage.setItem('theme', 'dark');
+}
+
+// Disable Dark Mode (i.e., default light mode)
+function disableDarkMode() {
+    body.classList.remove('dark-mode');
+    header.classList.remove('dark-mode');
+    footer.classList.remove('dark-mode');
+    modeToggle.innerHTML = '🌙';  // Change icon to moon for light mode
+    navLinks.forEach(link => link.classList.remove('dark-mode'));
+    cards.forEach(card => card.classList.remove('dark-mode'));
+
+    // Save the preference to localStorage
+    localStorage.setItem('theme', 'light');
+}
+       
+    </script>
+</body>
+</html>
